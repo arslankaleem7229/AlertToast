@@ -266,6 +266,8 @@ public struct AlertToast: View{
                 if let subTitle = subTitle {
                     Text(LocalizedStringKey(subTitle))
                         .font(style?.subTitleFont ?? Font.subheadline)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
             .multilineTextAlignment(.leading)
